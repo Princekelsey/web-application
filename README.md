@@ -1,6 +1,6 @@
 # Web Application Course (E-Shop built with VueJs)
 
-A face recognition Full stack application It detects faces in an image.
+A simple e-commerce application built with vue.
 
 Tools : VueJs, Vue Router, Axios, BootstrapVue,
 
