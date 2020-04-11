@@ -1,34 +1,43 @@
 <template>
   <div>
-  <b-nav vertical>
-      <b-nav-item v-for="category in categories"
-      :key="category.alias"
-      :to="'/categories/' +category.alias">{{category.title}}
-      </b-nav-item>
+    <b-nav vertical>
+      <b-nav-item
+        v-for="category in categories"
+        :key="category.alias"
+        :to="'/categories/' +category.alias"
+      >{{category.title}}</b-nav-item>
     </b-nav>
-</div>
+  </div>
 </template>
 
 <script>
 import axios from "axios";
 export default {
-  name: 'CategoriesMenu',
-  data: function(){
-    return{
+  name: "CategoriesMenu",
+  data: function() {
+    return {
       categories: []
-    }
+    };
   },
-mounted() {
-  axios
-  .get("https://euas.person.ee/categories")
-  .then(response =>{
-    this.categories=response.data;
-  });
-}
-}
+  mounted() {
+    axios.get("https://euas.person.ee/categories").then(response => {
+      this.categories = response.data;
+    });
+  }
+};
 </script>
 
 
 <style scoped>
+a {
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 14px;
+}
 
+a:hover {
+  color: #fff;
+  font-size: 16px;
+}
 </style>
