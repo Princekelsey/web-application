@@ -1,27 +1,31 @@
 <template>
   <div class="productpanel">
-    <h3>{{title}}</h3>
+    <h3 class="title">{{ title }}</h3>
     <Loading v-if="pending" />
     <!-- {{categoryAlias}} -->
     <b-card-group deck>
-      <productCard :product="product" v-for="product in products" :key="product.id" />
+      <ProductCard
+        :product="product"
+        v-for="product in products"
+        :key="product.id"
+      />
     </b-card-group>
   </div>
 </template>
 
 <script>
-import productCard from "./productCard.vue";
+import ProductCard from "./ProductCard";
 import axios from "axios";
 import Loading from "./Loading";
 export default {
-  name: "productpanel",
+  name: "ProductPanel",
   props: {
     title: String,
     categoryAlias: String,
     section: String
   },
   components: {
-    productCard,
+    ProductCard,
     Loading
   },
   data() {
@@ -68,5 +72,9 @@ export default {
 .productpanel {
   /* border:1px   solid red; */
   margin-bottom: 15px;
+}
+
+.title {
+  color: var(--lightBlue);
 }
 </style>

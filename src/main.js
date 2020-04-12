@@ -5,12 +5,11 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import VueRouter from "vue-router";
 import MainPage from "./components/MainPage.vue";
-import help from "./components/help.vue";
 import ProductPage from "./components/ProductPage.vue";
 import Category from "./components/Category.vue";
-import shoppingCart from "./components/shoppingCart.vue";
+import ShoppingCart from "./components/ShoppingCart.vue";
 import axios from "axios";
-import orderListing from "./components/orderListing.vue";
+import OrderListing from "./components/OrderListing.vue";
 import OrderDetails from "./components/OrderDetails.vue";
 import store from "./store";
 
@@ -21,9 +20,9 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   routes: [
     { path: "/", component: MainPage },
-    { path: "/help", component: help },
-    { path: "/cart", component: shoppingCart },
-    { path: "/orderlisting", component: orderListing },
+
+    { path: "/cart", component: ShoppingCart },
+    { path: "/orderlisting", component: OrderListing },
     { path: "/orders/:orderId", component: OrderDetails },
     { path: "/categories/:categoryAlias", component: Category },
     { path: "/products/:productId", component: ProductPage }

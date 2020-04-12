@@ -4,8 +4,11 @@
       <b-nav-item
         v-for="category in categories"
         :key="category.alias"
-        :to="'/categories/' +category.alias"
-      >{{category.title}}</b-nav-item>
+        :to="'/categories/' + category.alias"
+        ><div class="mt-4 category text-uppercase">
+          {{ category.title }}
+        </div></b-nav-item
+      >
     </b-nav>
   </div>
 </template>
@@ -27,17 +30,22 @@ export default {
 };
 </script>
 
-
 <style scoped>
 a {
-  color: #fff;
+  color: var(--mainWhite);
   text-decoration: none;
   background-color: transparent;
   font-size: 14px;
+  font-weight: bold;
 }
 
 a:hover {
-  color: #fff;
+  color: var(--mainWhite);
   font-size: 16px;
+}
+
+.category {
+  background: var(--navBlue);
+  padding: 10px;
 }
 </style>

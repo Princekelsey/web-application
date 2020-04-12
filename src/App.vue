@@ -4,7 +4,7 @@
 
     <!-- mt is margin top  -->
     <b-row>
-      <b-col cols="2" class="bg-dark siderBar">
+      <b-col cols="2" class="categoryConatiner siderBar">
         <CategoriesMenu />
       </b-col>
       <b-col cols="10" class="mt-3">
@@ -33,6 +33,7 @@ export default {
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
   --mainRed: #ec4c4c;
+  --navBlue: #636399;
 }
 .siderBar {
   height: 100vmax;
@@ -68,5 +69,9 @@ export default {
   cursor: pointer;
   font-size: 1.2rem;
   color: var(--mainRed);
+}
+
+.categoryConatiner {
+  background: var(--mainWhite);
 }
 </style>

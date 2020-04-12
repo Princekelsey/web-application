@@ -1,22 +1,20 @@
 <template>
   <div class="MainPage">
-    <productpanel title="Recommended Sales" section="recommended" />
+    <ProductPanel title="Recommended Sales" section="recommended" />
 
-    <productpanel title="Buy Now" section="buynow" />
+    <ProductPanel title="Buy Now" section="buynow" />
 
-    <productpanel title="Top Selling" section="topselling" />
+    <ProductPanel title="Top Selling" section="topselling" />
   </div>
 </template>
 
-
 <script>
-import productpanel from "./productpanel.vue";
+import ProductPanel from "./ProductPanel";
 export default {
   name: "MainPage",
   components: {
-    productpanel
+    ProductPanel
   }
 };
 </script>
-<style scoped>
-</style>
+<style scoped></style>

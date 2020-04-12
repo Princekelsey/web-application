@@ -29,9 +29,9 @@
 <script>
 import CustomButton from "./CustomButton";
 import Modal from "./Modal";
-import { mapActions } from "vuex";
+
 export default {
-  name: "productCard",
+  name: "ProductCard",
   props: {
     product: Object
   },
@@ -45,7 +45,6 @@ export default {
     Modal
   },
   methods: {
-    ...mapActions(["addOrder"]),
     addToCart: function() {
       if (!this.$root.$data.cart.items) this.$root.$data.cart.items = [];
       this.$root.$data.cart.items.push({
